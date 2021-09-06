@@ -1,0 +1,35 @@
+<div class="card" style="width: 18rem;">
+    <img routerLink="/details/{{product.id}}" *ngIf="product.image" class="card-img-top" src="{{product.image.medium}}"
+        alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text" [innerHTML]="product.summary"></p>
+        <a routerLink="/details/{{product.id}}" class="btn btn-primary">More Details</a>
+    </div>
+</div>
+
+
+
+
+<!-- averageRuntime: 60
+dvdCountry: null
+externals: {tvrage: null, thetvdb: 328577, imdb: "tt6474378"}
+genres: (3) ["Drama", "Comedy", "Crime"]
+id: 23542
+image: {medium: "https://static.tvmaze.com/uploads/images/medium_portrait/297/744253.jpg", original: "https://static.tvmaze.com/uploads/images/original_untouched/297/744253.jpg"}
+language: "English"
+name: "Good Girls"
+network: {id: 1, name: "NBC", country: {…}}
+officialSite: "https://www.nbc.com/good-girls"
+premiered: "2018-02-26"
+rating: {average: 7.3}
+runtime: 60
+schedule: {time: "21:00", days: Array(1)}
+status: "Ended"
+summary: "<p><b>Good Girls</b> follows three \"good girl\" suburban wives and mothers who suddenly find themselves in desperate circumstances and decide to stop playing it safe, and risk everything to take their power back.</p>"
+type: "Scripted"
+updated: 1627294164
+url: "https://www.tvmaze.com/shows/23542/good-girls"
+webChannel: null
+weight: 100
+_links: {self: {…}, previousepisode: {…}} -->

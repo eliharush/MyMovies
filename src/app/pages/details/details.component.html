@@ -1,0 +1,13 @@
+<app-nav></app-nav>
+
+<div class="container mt-5">
+    <div class="card" style="width: 18rem;">
+        <img *ngIf="productsService._selectedProduct.image" class="card-img-top"
+            src="{{productsService._selectedProduct.image.medium}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{productsService._selectedProduct.name}}</h5>
+            <p class="card-text" [innerHTML]="productsService._selectedProduct.summary"></p>
+        </div>
+    </div>
+    <a routerLink="/products" class="btn btn-primary mt-3">Back</a>
+</div>

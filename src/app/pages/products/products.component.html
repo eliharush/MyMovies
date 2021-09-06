@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+
+<div class="container">
+    <!-- <div class="banner">
+        <img src="assets/img/banner1.jpg" style="width:100%" />
+    </div> -->
+
+
+    <!-- search bar  -->
+    <div class="row mt-5">
+        <div class="form-group col-11">
+            <input type="text" [(ngModel)]="searchInput" (ngModelChange)="productService.search(searchInput)"
+                class="form-control" id="" placeholder="Search Movie">
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn btn-primary"
+                (click)="productService.searchMovies(searchInput)">Send</button>
+        </div>
+    </div>
+
+
+    <!-- product list  -->
+    <div class="row mt-2 p-2">
+        <div class="col-3 p-2" *ngFor="let product of productService._products">
+            <div>
+                <app-single-product [product]="product.show"></app-single-product>
+            </div>
+        </div>
+    </div>
+
+</div>
